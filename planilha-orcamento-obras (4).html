@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Ferramenta Que Toda Obra Deveria Ter | Planilha de Orçamento de Obras MZ</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1016479097730276');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  value: 337,
+  currency: 'MZN',
+  content_name: 'Obra certa master',
+  content_type: 'product'
+});
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1016479097730276&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+<style>
+  :root{
+    --bg-black:#0d0605;
+    --bg-dark:#150b08;
+    --bg-dark2:#1a0f0a;
+    --brown-glow: rgba(90,35,10,0.55);
+    --orange:#ff6a00;
+    --orange-light:#ff8a2b;
+    --orange-dark:#c94e00;
+    --gold-1:#fff4d6;
+    --gold-2:#f3c344;
+    --gold-3:#b8860b;
+    --red:#e8394a;
+    --text-white:#f5efe9;
+    --text-dim:#b7a99b;
+    --text-dim2:#8f8074;
+    --border-orange: rgba(255,106,0,0.35);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg-black);
+    color:var(--text-white);
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 20px;}
+  .wrap-narrow{max-width:820px; margin:0 auto; padding:0 20px;}
+
+  /* ===== Botões dourados brilhantes com movimento ===== */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-weight:800;
+    font-size:1.05rem;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+    padding:18px 30px;
+    position:relative;
+    overflow:hidden;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px) scale(1.015);}
+  .btn:active{transform:translateY(0);}
+
+  .btn-gold{
+    color:#3a2400;
+    background:linear-gradient(120deg,#fff8e4 0%, var(--gold-1) 15%, var(--gold-2) 45%, var(--gold-3) 65%, var(--gold-2) 85%, #fff2c9 100%);
+    background-size:250% 100%;
+    animation: goldShift 3.2s linear infinite;
+    box-shadow:0 6px 24px rgba(243,195,68,0.35), 0 2px 0 rgba(0,0,0,0.25) inset;
+  }
+  .btn-gold::before{
+    content:"";
+    position:absolute;
+    top:0; left:-60%;
+    width:45%; height:100%;
+    background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.85) 50%, transparent 100%);
+    transform:skewX(-20deg);
+    animation: shine 2.6s ease-in-out infinite;
+  }
+  @keyframes shine{
+    0%{ left:-60%; }
+    55%{ left:130%; }
+    100%{ left:130%; }
+  }
+  @keyframes goldShift{
+    0%{ background-position:0% 50%; }
+    100%{ background-position:250% 50%; }
+  }
+
+  .btn-orange{
+    color:#fff;
+    background:linear-gradient(135deg, var(--orange-light), var(--orange) 60%, var(--orange-dark));
+    box-shadow:0 8px 24px rgba(255,106,0,0.4);
+  }
+  .btn-orange::before{
+    content:"";
+    position:absolute;
+    top:0; left:-60%;
+    width:40%; height:100%;
+    background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%);
+    transform:skewX(-20deg);
+    animation: shine 3s ease-in-out infinite;
+  }
+  .btn-block{width:100%;}
+  .btn-icon{font-size:1.1em;}
+
+  .btn-sub{
+    text-align:center;
+    color:var(--text-dim);
+    font-size:.82rem;
+    margin-top:10px;
+    letter-spacing:.2px;
+  }
+
+  h1,h2,h3{line-height:1.2;}
+  .eyebrow{
+    display:inline-block;
+    color:var(--orange-light);
+    font-weight:800;
+    font-size:.78rem;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+  }
+
+  /* ===== Top urgency bar ===== */
+  .topbar{
+    background:linear-gradient(90deg, #b91c1c, #dc2626);
+    color:#fff;
+    text-align:center;
+    font-size:.78rem;
+    padding:9px 12px;
+    border-bottom:1px solid rgba(255,255,255,0.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .topbar b{color:#fff;}
+  .topbar span.vagas{color:#fff2d9; font-weight:700; margin-left:2px;}
+  .topbar .countdown{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    margin:0 2px;
+  }
+  .topbar .countdown .box{
+    background:rgba(0,0,0,0.28);
+    border:1px solid rgba(255,255,255,0.35);
+    color:#fff;
+    font-weight:800;
+    font-variant-numeric:tabular-nums;
+    border-radius:5px;
+    padding:2px 6px;
+    min-width:24px;
+    display:inline-block;
+    text-align:center;
+  }
+  .topbar .countdown .sep{color:#fff; font-weight:800;}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(120,45,10,0.55), transparent 60%),
+      linear-gradient(180deg, #200e08 0%, var(--bg-black) 55%);
+    padding:44px 0 60px;
+  }
+  .hero-badge{
+    display:inline-block;
+    background:rgba(232,57,74,0.12);
+    border:1px solid rgba(232,57,74,0.5);
+    color:#ff8f8f;
+    font-size:.72rem;
+    font-weight:700;
+    padding:6px 14px;
+    border-radius:20px;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:2.5rem;
+    font-weight:900;
+    color:#fff;
+  }
+  .hero h1 .accent{
+    color:var(--orange);
+    background:linear-gradient(90deg, var(--orange-light), var(--orange));
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .hero-sub{
+    color:var(--text-dim);
+    font-size:1.05rem;
+    max-width:640px;
+    margin:18px 0 8px;
+  }
+  .hero-sub b{color:#ffb877;}
+  .hero-note{
+    color:var(--text-dim2);
+    font-size:.85rem;
+    margin-bottom:28px;
+  }
+
+  .hero-card{
+    display:block;
+    position:relative;
+    border-radius:22px;
+    overflow:hidden;
+    max-width:640px;
+    margin:0 auto;
+    box-shadow:0 30px 70px rgba(0,0,0,0.55);
+    border:1px solid rgba(255,255,255,0.06);
+    transition:transform .2s ease;
+  }
+  .hero-card:hover{transform:translateY(-3px);}
+  .hero-card img{width:100%; height:auto; display:block;}
+
+  /* ===== Section generic ===== */
+  section{padding:64px 0;}
+  .section-dark{background:var(--bg-dark);}
+  .section-darker{background:var(--bg-black);}
+  .divider{
+    height:1px;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  }
+
+  /* ===== Pain section ===== */
+  .pain-title{
+    font-size:2rem;
+    font-weight:900;
+    color:#fff;
+  }
+  .pain-title .hl{color:var(--orange);}
+  .pain p{
+    color:var(--text-dim);
+    margin-top:18px;
+    max-width:700px;
+    font-size:1rem;
+  }
+  .pain b{color:#e9d9c8;}
+  .quote-box{
+    margin:26px 0 30px;
+    padding:18px 22px;
+    border-left:3px solid var(--orange);
+    background:rgba(255,106,0,0.06);
+    border-radius:6px;
+    max-width:700px;
+  }
+  .quote-box p{
+    color:#f0e3d5;
+    font-style:italic;
+    font-weight:600;
+    margin:0;
+  }
+  .good-news{
+    margin-top:56px;
+    text-align:left;
+  }
+  .good-news h3{
+    color:#fff;
+    font-size:1.3rem;
+    font-weight:800;
+  }
+  .good-news h3 .hl{color:var(--orange-light);}
+  .good-news p{
+    color:var(--text-dim);
+    margin:10px 0 22px;
+    max-width:600px;
+  }
+
+  /* ===== Cenarios checklist ===== */
+  .cen-title{
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:900;
+    color:#fff;
+  }
+  .cen-sub{
+    text-align:center;
+    color:var(--text-dim2);
+    margin-top:8px;
+    margin-bottom:34px;
+    font-size:.95rem;
+  }
+  .cen-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .cen-item{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    background:var(--bg-dark2);
+    border:1px solid var(--border-orange);
+    border-radius:10px;
+    padding:18px 20px;
+  }
+  .cen-item .x{
+    color:var(--red);
+    font-weight:900;
+    font-size:1.1rem;
+    line-height:1;
+    margin-top:2px;
+  }
+  .cen-item p{color:#ddd0c3; font-size:.92rem;}
+
+  /* ===== Split sections ===== */
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .split-img{
+    display:block;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 24px 50px rgba(0,0,0,0.5);
+    position:relative;
+    transition:transform .2s ease;
+  }
+  .split-img:hover{transform:translateY(-3px);}
+  .split-img img{width:100%; height:100%; object-fit:cover;}
+
+  .split-text .eyebrow-red{color:var(--red);}
+  .split-text h3{
+    color:#fff;
+    font-size:1.7rem;
+    font-weight:900;
+    margin-bottom:16px;
+  }
+  .split-text h3 .hl{color:var(--orange);}
+  .split-text p{color:var(--text-dim); margin-bottom:14px; font-size:.98rem;}
+  .split-text b{color:#e9d9c8;}
+
+  .split-reverse .split{grid-template-columns:1fr 1fr;}
+
+  /* ===== Features grid ===== */
+  .feat-title{
+    text-align:center;
+    font-size:1.9rem;
+    font-weight:900;
+    color:#fff;
+    margin-bottom:36px;
+  }
+  .feat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .feat-card{
+    background:var(--bg-dark2);
+    border:1px solid var(--border-orange);
+    border-radius:14px;
+    padding:24px 22px;
+  }
+  .feat-card .icon{font-size:1.7rem; margin-bottom:12px;}
+  .feat-card h4{color:var(--orange-light); font-size:1.02rem; font-weight:800; margin-bottom:8px;}
+  .feat-card p{color:var(--text-dim2); font-size:.87rem;}
+
+  /* ===== Imagine section ===== */
+  .imagine{margin-top:60px; text-align:center;}
+  .imagine h3{color:#fff; font-size:1.7rem; font-weight:900; margin-bottom:28px;}
+  .imagine-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    text-align:left;
+    margin-bottom:32px;
+  }
+  .imagine-item{
+    display:flex; gap:10px; align-items:flex-start;
+    border:1px solid var(--border-orange);
+    border-radius:10px;
+    padding:16px 18px;
+    background:rgba(255,106,0,0.03);
+  }
+  .imagine-item .ck{color:var(--orange-light); font-weight:900;}
+  .imagine-item p{color:#ddd0c3; font-size:.9rem;}
+
+  .center{text-align:center;}
+
+  /* ===== Bonus ===== */
+  .bonus-wrap{margin-top:70px;}
+  .bonus-title{
+    text-align:center;
+    color:var(--red);
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .bonus-h{
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:900;
+    color:#fff;
+  }
+  .bonus-sub{
+    text-align:center;
+    color:var(--text-dim2);
+    font-size:.9rem;
+    margin:10px 0 30px;
+  }
+  .bonus-sub s{color:#8a7a6c;}
+  .bonus-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .bonus-card{
+    border:1px solid var(--gold-3);
+    background:linear-gradient(180deg, rgba(184,134,11,0.08), rgba(184,134,11,0.02));
+    border-radius:14px;
+    padding:22px 20px;
+  }
+  .bonus-tag{color:var(--red); font-size:.7rem; font-weight:800; letter-spacing:.8px; text-transform:uppercase;}
+  .bonus-card .gift{font-size:1.5rem; margin:10px 0;}
+  .bonus-card h5{color:#fff; font-size:1rem; font-weight:800; margin-bottom:8px;}
+  .bonus-card p{color:var(--text-dim2); font-size:.85rem; margin-bottom:10px;}
+  .bonus-price{font-size:.8rem; color:#9c8c7c;}
+  .bonus-price s{color:#7a6c5f;}
+  .bonus-price .free{color:var(--orange-light); font-weight:700;}
+
+  /* ===== Testimonials ===== */
+  .test-wrap{margin-top:70px;}
+  .test-h{text-align:center; font-size:1.8rem; font-weight:900; color:#fff; margin-bottom:30px;}
+  .test-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .test-card{
+    border:1px solid var(--border-orange);
+    border-radius:14px;
+    padding:20px 22px;
+    background:var(--bg-dark2);
+  }
+  .test-top{display:flex; align-items:center; gap:12px; margin-bottom:10px;}
+  .avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:linear-gradient(135deg, var(--orange-light), var(--orange-dark));
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; color:#fff; font-size:.95rem;
+    flex-shrink:0;
+  }
+  .test-name{color:#fff; font-weight:700; font-size:.92rem;}
+  .test-meta{color:var(--text-dim2); font-size:.75rem;}
+  .test-meta .ok{color:#5fd97a;}
+  .stars{color:var(--orange); font-size:.85rem; margin-bottom:8px;}
+  .test-card p{color:#cdc0b3; font-size:.88rem; font-style:italic;}
+
+  /* ===== Guarantee ===== */
+  .guarantee-box{
+    max-width:700px;
+    margin:0 auto;
+    border:1px solid var(--border-orange);
+    border-radius:16px;
+    padding:36px 30px;
+    text-align:center;
+    background:radial-gradient(ellipse at 50% 0%, rgba(255,106,0,0.08), transparent 70%);
+  }
+  .shield{font-size:2.2rem; margin-bottom:10px;}
+  .guarantee-tag{color:var(--orange-light); font-size:.75rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;}
+  .guarantee-box h3{color:#fff; font-size:1.5rem; font-weight:900; margin-bottom:14px;}
+  .guarantee-box p{color:var(--text-dim); font-size:.92rem; max-width:560px; margin:0 auto;}
+  .guarantee-box p b{color:#f0e3d5;}
+
+  /* ===== Final offer ===== */
+  .final{margin-top:70px; text-align:center;}
+  .final-tag{color:var(--red); font-weight:800; font-size:.78rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;}
+  .final h2{font-size:2.2rem; font-weight:900; color:#fff;}
+  .final-sub1{color:var(--text-dim); margin-top:14px; font-size:1rem;}
+  .final-sub2{color:#f0dcc3; font-weight:700; margin-top:6px; font-size:1.05rem; max-width:620px; margin-left:auto; margin-right:auto;}
+  .final-timer{
+    margin-top:20px;
+    color:#ffb877;
+    font-size:.85rem;
+    font-weight:600;
+  }
+  .final-timer .vagas{color:var(--red); font-weight:800;}
+  .final-timer .countdown{
+    display:inline-flex; align-items:center; gap:4px; margin:0 4px;
+  }
+  .final-timer .countdown .box{
+    background:rgba(255,106,0,0.12);
+    border:1px solid rgba(255,106,0,0.4);
+    color:#ffb877;
+    font-weight:800;
+    font-variant-numeric:tabular-nums;
+    border-radius:5px;
+    padding:2px 6px;
+    min-width:24px;
+    display:inline-block;
+    text-align:center;
+  }
+  .final-timer .countdown .sep{color:#ffb877; font-weight:800;}
+
+  .offer-box{
+    max-width:520px;
+    margin:34px auto 0;
+    border:1px solid var(--border-orange);
+    border-radius:16px;
+    padding:30px 28px;
+    text-align:left;
+    background:var(--bg-dark2);
+  }
+  .offer-box h4{color:var(--orange-light); font-size:.95rem; font-weight:800; margin-bottom:16px;}
+  .offer-list{list-style:none;}
+  .offer-list li{
+    display:flex; gap:10px; align-items:flex-start;
+    color:#ddd0c3; font-size:.92rem;
+    margin-bottom:12px;
+  }
+  .offer-list li .ck{color:var(--orange-light); font-weight:900;}
+  .offer-hr{height:1px; background:rgba(255,255,255,0.08); margin:18px 0;}
+  .offer-price-row{text-align:center;}
+  .offer-total{color:#8a7a6c; font-size:.85rem;}
+  .offer-total s{color:#7a6c5f;}
+  .offer-today{color:var(--text-dim2); font-size:.85rem; margin:6px 0;}
+  .offer-price{font-size:2.6rem; font-weight:900; color:var(--orange);}
+  .offer-price span{font-size:1.1rem; font-weight:800;}
+  .offer-pay-note{color:var(--text-dim2); font-size:.78rem; margin-top:6px;}
+  .offer-methods{color:var(--text-dim2); font-size:.78rem; margin-top:8px;}
+
+  .final-cta{max-width:520px; margin:24px auto 0;}
+  .final-security{
+    color:var(--text-dim2);
+    font-size:.78rem;
+    margin-top:14px;
+    display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-h{text-align:center; font-size:1.9rem; font-weight:900; color:#fff;}
+  .faq-sub{text-align:center; color:var(--text-dim2); font-size:.9rem; margin:10px 0 30px;}
+  .faq-item{
+    border:1px solid var(--border-orange);
+    border-radius:10px;
+    margin-bottom:14px;
+    background:var(--bg-dark2);
+    overflow:hidden;
+  }
+  .faq-q{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 22px;
+    cursor:pointer;
+    color:#f0e3d5;
+    font-weight:700;
+    font-size:.95rem;
+  }
+  .faq-q .plus{
+    color:var(--orange);
+    font-size:1.3rem;
+    font-weight:900;
+    transition:transform .25s ease;
+    flex-shrink:0;
+    margin-left:14px;
+  }
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease;
+    padding:0 22px;
+  }
+  .faq-item.open .faq-a{padding:0 22px 20px;}
+  .faq-a p{color:var(--text-dim); font-size:.88rem;}
+
+  footer{
+    text-align:center;
+    padding:30px 20px 40px;
+    color:var(--text-dim2);
+    font-size:.78rem;
+    border-top:1px solid rgba(255,255,255,0.06);
+    margin-top:10px;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width:820px){
+    .split, .split-reverse .split{grid-template-columns:1fr;}
+    .split-img{order:-1;}
+    .feat-grid{grid-template-columns:1fr 1fr;}
+    .bonus-grid{grid-template-columns:1fr;}
+    .test-grid, .cen-grid, .imagine-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:1.9rem;}
+    .final h2{font-size:1.7rem;}
+    .pain-title{font-size:1.6rem;}
+  }
+  @media (max-width:520px){
+    .feat-grid{grid-template-columns:1fr;}
+    .hero-card-overlay{padding:22px 18px 20px;}
+    .hero-card h2{font-size:1.35rem;}
+    .hero-card .btn{left:18px; right:18px; bottom:18px; padding:14px 20px; font-size:.95rem;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    ⚡ <b>ESTA OFERTA ESPECIAL SAIRÁ DO AR ÀS 23:59</b>
+    <span class="countdown" id="countdown-top">
+      <span class="box" id="cd-top-h">00</span><span class="sep">:</span><span class="box" id="cd-top-m">00</span><span class="sep">:</span><span class="box" id="cd-top-s">00</span>
+    </span>
+    <span class="vagas">· Vagas limitadas</span>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap-narrow">
+      <div class="hero-badge">⚠ Atenção construtores, engenheiros e orçamentistas de MZ</div>
+      <h1>A <span class="accent">Ferramenta</span><br>Que Toda Obra<br>Deveria Ter</h1>
+      <p class="hero-sub">Descobre por que <b>7 em cada 10 obras em Moçambique</b> estouram o orçamento — e o método simples que engenheiros experientes usam para prever cada metical antes de assentar o primeiro tijolo.</p>
+      <p class="hero-note">👇 Lê até ao fim. O que vais descobrir pode salvar a tua próxima obra.</p>
+
+      <a href="#oferta" class="hero-card">
+        <img src="https://i.ibb.co/21sL0pX1/PHOTO-2026-07-02-18-43-27-jpg.jpg" alt="A Ferramenta Que Toda Obra Deveria Ter - Evite surpresas financeiras e aumente a previsibilidade do projeto">
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== PAIN / VERDADE ===== -->
+  <section class="section-darker pain">
+    <div class="wrap-narrow">
+      <p class="eyebrow">A verdade que ninguém te conta</p>
+      <h2 class="pain-title">Começou uma obra de <span class="hl">1 milhão de meticais</span>… e acabou a gastar <span class="hl">1,6 milhões</span>?</h2>
+
+      <p>Se já te aconteceu — ou tens medo que aconteça — <b>não estás sozinho.</b></p>
+      <p>A maioria dos construtores em Moçambique começa uma obra confiante… e a meio do caminho descobre que o cimento subiu, faltou areia, o pedreiro pediu mais — e o lucro que parecia garantido <b>simplesmente desaparece.</b></p>
+      <p>E o pior: quando percebes o rombo, já é tarde. Já assinaste o contrato pelo preço errado. Já compraste material a mais. Já perdeste dinheiro que não vai voltar.</p>
+
+      <div class="quote-box">
+        <p>"Todo o construtor que perde dinheiro numa obra perde por um único motivo: orçou no achismo, não em números."</p>
+      </div>
+
+      <a href="#oferta" class="btn btn-gold">🔧 Quero ver como funciona</a>
+      <p class="btn-sub">Só 397 MT · Acesso imediato · Garantia de 7 dias</p>
+
+      <div class="good-news">
+        <h3>A boa notícia? <span class="hl">Existe uma saída.</span></h3>
+        <p>Mas primeiro, deixa-me mostrar-te por que isto acontece — e o que continuar do mesmo jeito é escolher perder dinheiro.</p>
+        <a href="#solucao" class="btn btn-gold">🔧 Quero ver a solução</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CENARIOS ===== -->
+  <section class="section-dark" id="solucao">
+    <div class="wrap-narrow">
+      <h2 class="cen-title">Reconheces algum destes cenários?</h2>
+      <p class="cen-sub">Se disseres "sim" a pelo menos 2, esta página é para ti.</p>
+      <div class="cen-grid">
+        <div class="cen-item"><span class="x">✕</span><p>Fazes orçamentos de cabeça ou em folhas soltas, e depois esqueces itens importantes</p></div>
+        <div class="cen-item"><span class="x">✕</span><p>Compras material em excesso — ou descobres que falta no meio da obra</p></div>
+        <div class="cen-item"><span class="x">✕</span><p>Não sabes exatamente quanto vais lucrar até a obra terminar</p></div>
+        <div class="cen-item"><span class="x">✕</span><p>Perdes horas a refazer contas cada vez que o dono de obra pede uma alteração</p></div>
+        <div class="cen-item"><span class="x">✕</span><p>Já perdeste um cliente porque o teu orçamento pareceu "no ar"</p></div>
+        <div class="cen-item"><span class="x">✕</span><p>Sentes que trabalhas muito e no fim sobra pouco no bolso</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPLIT: custo real ===== -->
+  <section class="section-darker">
+    <div class="wrap">
+      <div class="split">
+        <a href="#oferta" class="split-img">
+          <img src="https://i.ibb.co/23sFYyQd/PHOTO-2026-07-02-18-43-54-jpg.jpg" alt="Sua obra está consumindo mais dinheiro que o previsto? Tenha controle completo dos custos antes que seja tarde">
+        </a>
+        <div class="split-text">
+          <p class="eyebrow">O custo real de continuar assim</p>
+          <h3>Cada obra sem orçamento sério é <span class="hl">dinheiro a escoar</span> pelas juntas do tijolo.</h3>
+          <p><b>Não é falta de trabalho. Não é falta de clientes. É falta de controlo.</b></p>
+          <p>Enquanto continuares a orçar no achismo, vais continuar a entregar obras com lucro pequeno — ou pior, com prejuízo disfarçado. E o mercado da construção em MZ está cada vez mais competitivo. Quem não tem números claros, perde para quem tem.</p>
+          <a href="#oferta" class="btn btn-gold">🔧 Quero parar de perder dinheiro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPLIT: orçamentos mais precisos ===== -->
+  <section class="section-dark split-reverse">
+    <div class="wrap">
+      <div class="split">
+        <div class="split-text">
+          <p class="eyebrow">A boa notícia</p>
+          <h3>Orçamentos <span class="hl">Mais Precisos.</span><br><span class="hl">Mais Lucro.</span></h3>
+          <p>Existe uma forma simples de acabar com este problema de vez: uma <b>planilha profissional de orçamento de obras</b> feita especificamente para o mercado moçambicano, com todos os cálculos automáticos e categorias já mapeadas.</p>
+          <p>Basta preencher. A planilha faz o resto. Custo total, custo por m², distribuição por categoria, previsão de lucro — <b>tudo em Meticais e em segundos.</b></p>
+        </div>
+        <a href="#oferta" class="split-img">
+          <img src="https://i.ibb.co/RkWvZMRQ/PHOTO-2026-07-02-18-43-41-jpg.jpg" alt="Orçamentos mais precisos, mais lucro. Planeje materiais, mão de obra e custos em uma única planilha">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section-darker">
+    <div class="wrap">
+      <h2 class="feat-title">Tudo o que precisas numa única planilha</h2>
+      <div class="feat-grid">
+        <div class="feat-card">
+          <div class="icon">🏗️</div>
+          <h4>Estrutura Profissional</h4>
+          <p>Serviços preliminares, infraestrutura, superestrutura, acabamentos — tudo já mapeado.</p>
+        </div>
+        <div class="feat-card">
+          <div class="icon">💰</div>
+          <h4>Custo Total Automático</h4>
+          <p>Vê em tempo real quanto vai custar a tua obra do início ao fim.</p>
+        </div>
+        <div class="feat-card">
+          <div class="icon">📐</div>
+          <h4>Cálculo por m²</h4>
+          <p>Descobre o custo real por metro quadrado e nunca mais te enganes no preço.</p>
+        </div>
+        <div class="feat-card">
+          <div class="icon">📊</div>
+          <h4>Gráficos Automáticos</h4>
+          <p>Resumo geral e distribuição visual dos custos para apresentar ao cliente.</p>
+        </div>
+        <div class="feat-card">
+          <div class="icon">📈</div>
+          <h4>Previsão de Lucro</h4>
+          <p>Sabe exatamente quanto vais lucrar antes de assinar o contrato.</p>
+        </div>
+        <div class="feat-card">
+          <div class="icon">🇲🇿</div>
+          <h4>Feito para Moçambique</h4>
+          <p>Valores em Meticais e categorias adaptadas à realidade do mercado local.</p>
+        </div>
+      </div>
+
+      <div class="imagine">
+        <h3>Imagina a tua próxima obra assim:</h3>
+        <div class="imagine-grid">
+          <div class="imagine-item"><span class="ck">✓</span><p>Recebes o pedido do cliente e em 30 minutos entregas um orçamento profissional</p></div>
+          <div class="imagine-item"><span class="ck">✓</span><p>Compras exatamente a quantidade certa de cada material — nem mais, nem menos</p></div>
+          <div class="imagine-item"><span class="ck">✓</span><p>Sabes antes de começar quanto vais lucrar no fim</p></div>
+          <div class="imagine-item"><span class="ck">✓</span><p>Passas confiança ao cliente e fechas mais contratos</p></div>
+          <div class="imagine-item"><span class="ck">✓</span><p>Terminas a obra no prazo e dentro do orçamento previsto</p></div>
+          <div class="imagine-item"><span class="ck">✓</span><p>No fim do mês, sobra dinheiro no bolso — não dívida</p></div>
+        </div>
+        <div class="center">
+          <a href="#oferta" class="btn btn-gold">🔧 Quero começar a lucrar mais</a>
+        </div>
+      </div>
+
+      <!-- BONUS -->
+      <div class="bonus-wrap">
+        <p class="bonus-title">✦ Ainda tem mais</p>
+        <h3 class="bonus-h">3 Bônus Incluídos GRÁTIS</h3>
+        <p class="bonus-sub">Só hoje, no valor total de <s>2.300 MT</s> — inclusos sem pagar nada a mais.</p>
+        <div class="bonus-grid">
+          <div class="bonus-card">
+            <p class="bonus-tag">Bônus #1</p>
+            <div class="gift">🎁</div>
+            <h5>Cronograma de Obra</h5>
+            <p>Planeia prazos por fase e evita atrasos que custam caro.</p>
+            <p class="bonus-price"><s>300 MT</s> · <span class="free">Grátis hoje</span></p>
+          </div>
+          <div class="bonus-card">
+            <p class="bonus-tag">Bônus #2</p>
+            <div class="gift">🎁</div>
+            <h5>Checklist de Materiais</h5>
+            <p>Lista completa dos materiais essenciais por tipo de obra.</p>
+            <p class="bonus-price"><s>250 MT</s> · <span class="free">Grátis hoje</span></p>
+          </div>
+          <div class="bonus-card">
+            <p class="bonus-tag">Bônus #3</p>
+            <div class="gift">🎁</div>
+            <h5>Guia de Negociação com Fornecedores</h5>
+            <p>Aprende a negociar melhores preços com fornecedores em MZ.</p>
+            <p class="bonus-price"><s>350 MT</s> · <span class="free">Grátis hoje</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div class="test-wrap">
+        <h3 class="test-h">Quem já usa não larga mais</h3>
+        <div class="test-grid">
+          <div class="test-card">
+            <div class="test-top">
+              <div class="avatar">A</div>
+              <div><div class="test-name">Alberto M.</div><div class="test-meta">Maputo · <span class="ok">✓</span> Compra verificada</div></div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Reduzi em 22% os desvios da minha última obra em Matola. Já não faço orçamento sem esta planilha."</p>
+          </div>
+          <div class="test-card">
+            <div class="test-top">
+              <div class="avatar">H</div>
+              <div><div class="test-name">Hélio J.</div><div class="test-meta">Beira · <span class="ok">✓</span> Compra verificada</div></div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Consegui prever o lucro certinho antes de fechar o contrato. Salvou um projeto que ia dar prejuízo."</p>
+          </div>
+          <div class="test-card">
+            <div class="test-top">
+              <div class="avatar">C</div>
+              <div><div class="test-name">Carla E.</div><div class="test-meta">Matola · <span class="ok">✓</span> Compra verificada</div></div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Uso em todas as obras da construtora. Passei a fechar mais contratos porque os clientes confiam nos números."</p>
+          </div>
+          <div class="test-card">
+            <div class="test-top">
+              <div class="avatar">T</div>
+              <div><div class="test-name">Tiago N.</div><div class="test-meta">Nampula · <span class="ok">✓</span> Compra verificada</div></div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Achei que era só mais uma planilha, mas é completa mesmo. Melhores 397 MT que já gastei."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUARANTEE + FINAL OFFER ===== -->
+  <section class="section-dark" id="oferta">
+    <div class="wrap-narrow">
+      <div class="center">
+        <a href="#comprar" class="btn btn-gold">🔧 Quero os melhores resultados</a>
+        <p class="btn-sub">Só 397 MT · Garantia de 7 dias · Acesso imediato</p>
+      </div>
+
+      <div class="guarantee-box" style="margin-top:44px;">
+        <div class="shield">🛡️</div>
+        <p class="guarantee-tag">Garantia blindada</p>
+        <h3>7 dias de garantia incondicional</h3>
+        <p>Baixa a planilha, testa numa obra real. Se em 7 dias não sentires que vale cada metical, devolvemos <b>100% do teu dinheiro</b>. Sem perguntas, sem burocracia. <b>O risco é todo nosso.</b></p>
+      </div>
+
+      <div class="final">
+        <p class="final-tag">Última chamada</p>
+        <h2>A decisão é tua</h2>
+        <p class="final-sub1">Podes continuar a perder dinheiro obra após obra…</p>
+        <p class="final-sub2">Ou podes tomar o controlo agora, por menos do que gastas num saco de cimento.</p>
+        <p class="final-timer">⏰ ESTA OFERTA ESPECIAL SAIRÁ DO AR ÀS 23:59
+          <span class="countdown countdown-gold" id="countdown-final">
+            <span class="box" id="cd-final-h">00</span><span class="sep">:</span><span class="box" id="cd-final-m">00</span><span class="sep">:</span><span class="box" id="cd-final-s">00</span>
+          </span>
+          <span class="vagas">· Vagas limitadas</span></p>
+
+        <div class="offer-box" id="comprar">
+          <h4>Tudo o que recebes hoje</h4>
+          <ul class="offer-list">
+            <li><span class="ck">✓</span> Planilha completa de orçamento (Excel)</li>
+            <li><span class="ck">✓</span> Bônus #1 — Cronograma de Obra (300 MT)</li>
+            <li><span class="ck">✓</span> Bônus #2 — Checklist de Materiais (250 MT)</li>
+            <li><span class="ck">✓</span> Bônus #3 — Guia de Negociação com Fornecedores (350 MT)</li>
+            <li><span class="ck">✓</span> Acesso vitalício e atualizações</li>
+            <li><span class="ck">✓</span> Garantia blindada de 7 dias</li>
+          </ul>
+          <div class="offer-hr"></div>
+          <div class="offer-price-row">
+            <p class="offer-total">Valor total: <s>2.300 MT</s></p>
+            <p class="offer-today">Hoje, apenas:</p>
+            <p class="offer-price">397 <span>MT</span></p>
+            <p class="offer-pay-note">Pagamento único · sem mensalidade</p>
+            <p class="offer-methods">💳 M-Pesa · e-Mola · Cartão Visa/Mastercard</p>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <a href="#" class="btn btn-gold btn-block">🤝 SIM! Quero baixar a planilha por 397 MT</a>
+          <div class="final-security">
+            <span>🔒 Pagamento seguro</span>
+            <span>⚡ Acesso imediato</span>
+            <span>🛡️ Garantia de 7 dias</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-darker">
+    <div class="wrap-narrow">
+      <h2 class="faq-h">Perguntas frequentes</h2>
+      <p class="faq-sub">Tira as tuas dúvidas antes de começar</p>
+
+      <div class="faq-item">
+        <div class="faq-q">Funciona em qualquer versão do Excel? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Sim. A planilha é compatível com Excel 2013 em diante, Excel 365 e também com o Google Sheets. Basta fazer o download e abrir normalmente.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Como recebo a planilha após o pagamento? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Assim que o pagamento é confirmado, recebes o link de download diretamente no teu e-mail e/ou WhatsApp, com acesso imediato.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Serve para qualquer tipo de obra? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Sim. Serve para construções residenciais, comerciais, ampliações e reformas — as categorias foram pensadas para se adaptarem a diferentes tipos e tamanhos de obra.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Preciso saber muito de Excel? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Não. A planilha já vem com todas as fórmulas prontas. Só precisas de preencher os campos indicados — os cálculos são feitos automaticamente.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quais formas de pagamento aceitam? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Aceitamos M-Pesa, e-Mola e cartão Visa/Mastercard, através de um checkout seguro.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">E se eu não gostar? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Tens 7 dias de garantia incondicional. Se não sentires valor na planilha, devolvemos 100% do teu dinheiro, sem perguntas.</p></div>
+      </div>
+
+      <div class="center" style="margin-top:30px;">
+        <a href="#comprar" class="btn btn-gold">Sim, eu quero · 397 MT</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Planilha de Orçamento de Obras MZ · Todos os direitos reservados
+  </footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    item.querySelector('.faq-q').addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); });
+      if(!isOpen){ item.classList.add('open'); }
+    });
+  });
+</script>
+
+<script>
+const compras = [
+    {nome: "Ana Macamo", provincia: "Maputo"},
+    {nome: "João Manuel", provincia: "Nampula"},
+    {nome: "Carlos Alberto", provincia: "Sofala"},
+    {nome: "Maria José", provincia: "Tete"},
+    {nome: "Pedro António", provincia: "Manica"},
+    {nome: "Helena Paulo", provincia: "Inhambane"},
+    {nome: "Nelson Luís", provincia: "Zambézia"},
+    {nome: "Rosa Fernando", provincia: "Cabo Delgado"},
+    {nome: "Filipe João", provincia: "Niassa"},
+    {nome: "Sérgio Mateus", provincia: "Gaza"}
+];
+function mostrarCompra() {
+    let compra = compras[Math.floor(Math.random() * compras.length)];
+    let popup = document.createElement("div");
+    popup.innerHTML = `
+        <div class="compra-popup">
+            <div class="icone">✓</div>
+            <div>
+                <strong>Compra confirmada!</strong><br>
+                ${compra.nome} de <b>${compra.provincia}</b><br>
+                comprou por apenas <b>337 MT</b>
+                <br><small>Há poucos minutos</small>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(popup);
+    setTimeout(() => {
+        popup.remove();
+    }, 5000);
+}
+setInterval(mostrarCompra, 8000);
+mostrarCompra();
+</script>
+<style>
+.compra-popup{
+    position:fixed;
+    bottom:25px;
+    left:25px;
+    background:rgba(20,10,6,0.55);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    padding:15px 20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 5px 25px rgba(0,0,0,0.35);
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-family:Arial,sans-serif;
+    z-index:99999;
+    animation:entrada .5s ease;
+    max-width:350px;
+    color:#f0e9e2;
+}
+.icone{
+    background:rgba(22,163,74,0.85);
+    color:white;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    flex-shrink:0;
+}
+.compra-popup strong{
+    color:#4ade80;
+}
+.compra-popup b{
+    color:#ffb877;
+}
+.compra-popup small{
+    color:#c9beb3;
+}
+@keyframes entrada{
+    from{
+        transform:translateX(-100%);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+</style>
+
+<script>
+function atualizarContagem(){
+    const agora = new Date();
+    let alvo = new Date(agora.getFullYear(), agora.getMonth(), agora.getDate(), 23, 59, 59);
+    if(agora > alvo){
+        alvo.setDate(alvo.getDate() + 1);
+    }
+    const diff = Math.max(0, alvo - agora);
+    const h = String(Math.floor(diff / 3600000)).padStart(2,"0");
+    const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2,"0");
+    const s = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
+
+    ["top","final"].forEach(prefixo => {
+        const elH = document.getElementById(`cd-${prefixo}-h`);
+        const elM = document.getElementById(`cd-${prefixo}-m`);
+        const elS = document.getElementById(`cd-${prefixo}-s`);
+        if(elH){ elH.textContent = h; elM.textContent = m; elS.textContent = s; }
+    });
+}
+atualizarContagem();
+setInterval(atualizarContagem, 1000);
+</script>
+
+</body>
+</html>
